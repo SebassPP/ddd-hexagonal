@@ -20,8 +20,6 @@ public class ProductoORM {
     private int id;
     @Column(name = "nombre")
     private String nombre;
-    @Column(name = "proveedor")
-    private String proveedor;
     @Column(name = "descripcion")
     private String descripcion;
     @Column(name = "stock")
@@ -30,8 +28,6 @@ public class ProductoORM {
     private double precio;
     @Column(name = "fecha_agregado")
     private Date fechaAgregado;
-    @Column(name = "estado_producto")
-    private EstadoProducto estadoProducto;
 
     public Producto convertToProducto() {
         return new Producto(id, nombre, descripcion, stock, precio);

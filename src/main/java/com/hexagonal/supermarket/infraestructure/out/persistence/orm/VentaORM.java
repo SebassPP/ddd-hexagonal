@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 
@@ -15,6 +16,7 @@ import java.util.Date;
 @Table(name = "t_venta")
 public class VentaORM {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_venta")
     private Integer id;
     @Column(name = "id_cliente")
@@ -27,7 +29,5 @@ public class VentaORM {
     private int cantidad;
     @Column(name = "estado_venta")
     private EstadoVenta estadoVenta;
-    @Column(name = "total")
-    private double total;
 
 }
