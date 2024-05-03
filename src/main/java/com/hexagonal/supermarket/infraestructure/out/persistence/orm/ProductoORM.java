@@ -17,7 +17,7 @@ import java.util.Date;
 public class ProductoORM {
     @Id
     @Column(name = "id_producto")
-    private String id;
+    private int id;
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "proveedor")
@@ -25,7 +25,7 @@ public class ProductoORM {
     @Column(name = "descripcion")
     private String descripcion;
     @Column(name = "stock")
-    private int stock;
+    private Integer stock;
     @Column(name = "precio")
     private double precio;
     @Column(name = "fecha_agregado")

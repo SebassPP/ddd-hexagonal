@@ -16,7 +16,7 @@ import java.util.Date;
 public class VentaORM {
     @Id
     @Column(name = "id_venta")
-    private String id;
+    private Integer id;
     @Column(name = "id_cliente")
     private String idCliente;
     @Column(name = "fecha_venta")

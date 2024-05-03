@@ -5,10 +5,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Producto {
 
-        private String id;
+        private Integer id;
         private String nombre;
         private String descripcion;
-        private int stock;
+        private Integer stock;
         private double precio;
 
 }
