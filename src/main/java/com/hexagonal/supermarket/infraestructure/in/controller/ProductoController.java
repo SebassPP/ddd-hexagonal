@@ -1,4 +1,4 @@
-package com.hexagonal.supermarket.infraestructure.in;
+package com.hexagonal.supermarket.infraestructure.in.controller;
 
 import com.hexagonal.supermarket.domain.entity.Producto;
 import com.hexagonal.supermarket.infraestructure.out.persistence.adapter.ProductoAdapterRepository;

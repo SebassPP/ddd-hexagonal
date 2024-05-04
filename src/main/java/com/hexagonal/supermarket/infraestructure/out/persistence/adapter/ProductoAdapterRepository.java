@@ -1,6 +1,6 @@
 package com.hexagonal.supermarket.infraestructure.out.persistence.adapter;
 
-import com.hexagonal.supermarket.application.exception.ProductoNoExisteException;
+import com.hexagonal.supermarket.domain.exception.ProductoNoExisteException;
 import com.hexagonal.supermarket.domain.entity.Producto;
 import com.hexagonal.supermarket.domain.repository.ProductoPort;
 import com.hexagonal.supermarket.infraestructure.out.persistence.adapter.repository.ProductoJPARepository;
@@ -58,7 +58,7 @@ public class ProductoAdapterRepository implements ProductoPort{
     }
 
     @Override
-    public void RestarStockProducto(Integer idProducto, Integer cantidad) {
+    public void restarStockProducto(Integer idProducto, Integer cantidad) {
         ProductoORM productoORM = productoJPARepository.findById(idProducto).get();
         productoORM.setStock(productoORM.getStock() - cantidad);
         productoJPARepository.save(productoORM);

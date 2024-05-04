@@ -1,4 +1,4 @@
-package com.hexagonal.supermarket.infraestructure.in;
+package com.hexagonal.supermarket.infraestructure.in.controller;
 
 import com.hexagonal.supermarket.application.portin.IRealizarVenta;
 import com.hexagonal.supermarket.application.usecase.VentaDTO;

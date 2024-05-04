@@ -1,4 +1,4 @@
-package com.hexagonal.supermarket.application.exception;
+package com.hexagonal.supermarket.domain.exception;
 
 public class ProductoNoExisteException extends RuntimeException{
     public ProductoNoExisteException(Integer idProducto) {

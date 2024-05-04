@@ -1,7 +1,7 @@
 package com.hexagonal.supermarket.application.usecase;
 
 import com.hexagonal.supermarket.application.exception.LimiteProductosVenta;
-import com.hexagonal.supermarket.application.exception.ProductoNoExisteException;
+import com.hexagonal.supermarket.domain.exception.ProductoNoExisteException;
 import com.hexagonal.supermarket.application.portin.IRealizarVenta;
 import com.hexagonal.supermarket.domain.enums.EstadoVenta;
 import com.hexagonal.supermarket.domain.exception.StockInsuficienteException;
@@ -44,7 +44,7 @@ public class RealizarVenta implements IRealizarVenta {
         if (estadoVenta == EstadoVenta.CANCELADA) {
             throw new StockInsuficienteException(ventaDTO.idProducto());
         }
-        productoPort.RestarStockProducto(ventaDTO.idProducto(), ventaDTO.cantidad());
+        productoPort.restarStockProducto(ventaDTO.idProducto(), ventaDTO.cantidad());
         ventaORM.setIdCliente(idClienteAleatorioString);
         ventaORM.setFechaVenta(new Date());
         ventaORM.setProducto(productoORM);
